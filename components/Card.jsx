@@ -1,3 +1,6 @@
+"use client";
+
+import { CldUploadButton } from "next-cloudinary";
 import Image from "next/image";
 import photo from "@/public/b1.jpg";
 
@@ -5,6 +8,7 @@ export default function Home() {
   return (
     <div className="bg-gray-100 flex items-center justify-center h-screen">
       <div className="flex flex-wrap justify-around">
+        <CldUploadButton uploadPreset="pcgb9hrq" />
         {/* <!-- First Card --> */}
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white m-4">
           <Image className="w-full" src={photo} alt="Product Image" />
