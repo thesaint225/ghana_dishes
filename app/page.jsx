@@ -11,26 +11,28 @@ import connectedDB from "@/db";
 import Food from "@/models/Food";
 
 export default async function Home() {
-  // console.log(process.env.MONGODB_URI);
+  console.log(process.env.MONGODB_URI);
+
   connectedDB();
+  // console.log(process.env.DOMAIN);
 
   // Create a new instance of Food
-  const newFood = new Food({
-    name: "Pizza",
-    description: "Delicious Italian dish",
-  });
+  // const newFood = new Food({
+  //   name: "Pizza",
+  //   description: "Delicious Italian dish",
+  // });
 
   // console.log(newFood);
 
   // Save the newFood instance to the database
-  newFood
-    .save()
-    .then((savedFood) => {
-      console.log("Food saved successfully:", savedFood);
-    })
-    .catch((error) => {
-      console.error("Error saving food:", error);
-    });
+  // newFood
+  //   .save()
+  //   .then((savedFood) => {
+  //     console.log("Food saved successfully:", savedFood);
+  //   })
+  //   .catch((error) => {
+  //     console.error("Error saving food:", error);
+  //   });
   return (
     <>
       <Navbar />
